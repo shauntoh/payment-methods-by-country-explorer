@@ -1,11 +1,12 @@
-﻿const paymentsData = [
+const paymentsData = [
   {
     id: 1,
     country: "Singapore",
     flag: "🇸🇬",
     region: "APAC",
     dominantPaymentMethod: "PayNow / Cards",
-    settlementSpeed: "Instant for PayNow, T+1 for cards",
+    population: 5920000,
+    gdp_per_capita: 84700,
     cardPenetration: "Very high",
     gamingNotes: "Strong adoption of wallet top-ups and instant bank transfers.",
     dominantMethods: ["PayNow", "Visa", "Mastercard", "GrabPay"]
@@ -16,7 +17,8 @@
     flag: "🇯🇵",
     region: "APAC",
     dominantPaymentMethod: "Cards + Konbini",
-    settlementSpeed: "T+1 to T+2",
+    population: 124000000,
+    gdp_per_capita: 32487,
     cardPenetration: "High",
     gamingNotes: "Convenience-store payments remain important for younger users.",
     dominantMethods: ["JCB", "Visa", "Konbini", "PayPay"]
@@ -27,7 +29,8 @@
     flag: "🇧🇷",
     region: "LATAM",
     dominantPaymentMethod: "PIX",
-    settlementSpeed: "Instant",
+    population: 203000000,
+    gdp_per_capita: 10500,
     cardPenetration: "Medium to high",
     gamingNotes: "PIX is dominant for fast deposits and withdrawals.",
     dominantMethods: ["PIX", "Boleto", "Visa", "Mastercard"]
@@ -38,7 +41,8 @@
     flag: "🇲🇽",
     region: "LATAM",
     dominantPaymentMethod: "Cash vouchers + Cards",
-    settlementSpeed: "Instant to T+2",
+    population: 129000000,
+    gdp_per_capita: 13300,
     cardPenetration: "Medium",
     gamingNotes: "Cash-based voucher flows still matter in many segments.",
     dominantMethods: ["OXXO Pay", "Visa", "Mastercard", "SPEI"]
@@ -49,7 +53,8 @@
     flag: "🇺🇸",
     region: "North America",
     dominantPaymentMethod: "Cards",
-    settlementSpeed: "T+1 to T+2",
+    population: 334000000,
+    gdp_per_capita: 82769,
     cardPenetration: "Very high",
     gamingNotes: "Cards dominate, with growing wallet usage for mobile players.",
     dominantMethods: ["Visa", "Mastercard", "Amex", "PayPal", "Apple Pay"]
@@ -60,7 +65,8 @@
     flag: "🇨🇦",
     region: "North America",
     dominantPaymentMethod: "Cards + Interac",
-    settlementSpeed: "Near real-time to T+1",
+    population: 40200000,
+    gdp_per_capita: 53400,
     cardPenetration: "Very high",
     gamingNotes: "Interac is widely trusted for bank-linked transfers.",
     dominantMethods: ["Interac", "Visa", "Mastercard", "PayPal"]
@@ -71,7 +77,8 @@
     flag: "🇬🇧",
     region: "Europe",
     dominantPaymentMethod: "Cards + Open Banking",
-    settlementSpeed: "Instant to T+1",
+    population: 68400000,
+    gdp_per_capita: 49400,
     cardPenetration: "Very high",
     gamingNotes: "Open banking rails are growing for lower-cost account transfers.",
     dominantMethods: ["Visa", "Mastercard", "Faster Payments", "PayPal"]
@@ -82,7 +89,8 @@
     flag: "🇩🇪",
     region: "Europe",
     dominantPaymentMethod: "Cards + Bank Transfer",
-    settlementSpeed: "T+1",
+    population: 84200000,
+    gdp_per_capita: 52900,
     cardPenetration: "High",
     gamingNotes: "Bank transfer and wallet options remain strong alongside cards.",
     dominantMethods: ["SEPA", "Visa", "Mastercard", "PayPal", "Sofort"]
@@ -93,7 +101,8 @@
     flag: "🇦🇪",
     region: "MEA",
     dominantPaymentMethod: "Cards + Wallets",
-    settlementSpeed: "Instant to T+1",
+    population: 10100000,
+    gdp_per_capita: 51000,
     cardPenetration: "High",
     gamingNotes: "Fast growth in mobile wallet payments and prepaid usage.",
     dominantMethods: ["Visa", "Mastercard", "Apple Pay", "Google Pay"]
@@ -104,7 +113,8 @@
     flag: "🇿🇦",
     region: "MEA",
     dominantPaymentMethod: "Cards + EFT",
-    settlementSpeed: "T+1",
+    population: 62000000,
+    gdp_per_capita: 6400,
     cardPenetration: "Medium",
     gamingNotes: "EFT and card mix supports broad payment coverage.",
     dominantMethods: ["EFT", "Visa", "Mastercard", "Ozow"]
@@ -115,7 +125,8 @@
     flag: "🇮🇳",
     region: "Emerging",
     dominantPaymentMethod: "UPI",
-    settlementSpeed: "Instant",
+    population: 1430000000,
+    gdp_per_capita: 2698,
     cardPenetration: "Medium",
     gamingNotes: "UPI drives very high transaction velocity in digital commerce.",
     dominantMethods: ["UPI", "RuPay", "Visa", "Paytm"]
@@ -126,7 +137,8 @@
     flag: "🇳🇬",
     region: "Emerging",
     dominantPaymentMethod: "Bank Transfer",
-    settlementSpeed: "Near real-time",
+    population: 223000000,
+    gdp_per_capita: 2140,
     cardPenetration: "Low to medium",
     gamingNotes: "Local transfers and wallet systems are key for accessibility.",
     dominantMethods: ["NIP Transfer", "Verve", "Visa", "Flutterwave"]
