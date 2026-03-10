@@ -1,3 +1,5 @@
+import { getFlagEmoji } from "../utils/flags";
+
 function Sidebar({
   countries,
   selectedCountry,
@@ -21,6 +23,7 @@ function Sidebar({
       <ul className="country-list">
         {countries.map((country) => {
           const isSelected = selectedCountry?.id === country.id;
+          const flag = getFlagEmoji(country.code);
 
           return (
             <li key={country.id}>
@@ -29,7 +32,7 @@ function Sidebar({
                 className={`country-button ${isSelected ? "selected" : ""}`}
                 onClick={() => onSelectCountry(country)}
               >
-                <span>{country.flag}</span>
+                <span>{flag}</span>
                 <span>{country.country}</span>
               </button>
             </li>

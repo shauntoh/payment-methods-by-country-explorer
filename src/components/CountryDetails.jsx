@@ -1,4 +1,5 @@
 import PaymentMethodTags from "./PaymentMethodTags";
+import { getFlagEmoji } from "../utils/flags";
 
 function formatPopulationInMillions(population) {
   return `${Math.round(population / 1000000)}M`;
@@ -21,13 +22,15 @@ function CountryDetails({ country }) {
     );
   }
 
+  const flag = getFlagEmoji(country.code);
+
   return (
     <div className="card country-card">
       <div className="country-header">
         <div className="country-title-block">
           <div className="country-title-row">
             <span className="flag-inline" aria-label={`${country.country} flag`}>
-              {country.flag}
+              {flag}
             </span>
             <h2>{country.country}</h2>
           </div>
