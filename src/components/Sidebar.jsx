@@ -1,4 +1,4 @@
-﻿function Sidebar({
+function Sidebar({
   countries,
   selectedCountry,
   onSelectCountry,
@@ -7,8 +7,8 @@
 }) {
   return (
     <aside className="sidebar card">
-      <h1>Payment Explorer</h1>
-      <p className="sidebar-subtitle">Payment Methods by Country</p>
+      <h1>Video Gaming Payments Explorer</h1>
+      <p className="sidebar-subtitle">Local payment methods for gaming and digital goods markets</p>
 
       <input
         type="text"

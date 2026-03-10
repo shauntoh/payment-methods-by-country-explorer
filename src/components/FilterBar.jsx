@@ -1,11 +1,11 @@
-﻿const REGIONS = [
+const REGIONS = [
   "All",
   "APAC",
   "LATAM",
   "North America",
   "Europe",
   "MEA",
-  "Emerging"
+  "South Asia"
 ];
 
 function FilterBar({ selectedRegion, onRegionChange }) {
