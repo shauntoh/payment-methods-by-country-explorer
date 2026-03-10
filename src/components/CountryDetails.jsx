@@ -56,6 +56,27 @@ function CountryDetails({ country }) {
         </div>
       </div>
 
+      <div className="payment-mix">
+        <div className="payment-mix-header">
+          <p className="label">Payment Method Mix</p>
+          <span className="mix-estimated">Estimated</span>
+        </div>
+
+        <div className="payment-mix-list">
+          {(country.payment_share || []).map((item) => (
+            <div key={item.method} className="mix-row">
+              <div className="mix-row-top">
+                <span className="mix-method">{item.method}</span>
+                <span className="mix-share">{item.share}%</span>
+              </div>
+              <div className="mix-track" role="presentation">
+                <div className="mix-fill" style={{ width: `${item.share}%` }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="gaming-notes">
         <p className="label">Gaming Notes</p>
         <p>{country.gamingNotes}</p>
