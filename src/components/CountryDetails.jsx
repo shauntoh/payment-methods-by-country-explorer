@@ -81,8 +81,8 @@ function CountryDetails({ country }) {
       </div>
 
       <div className="gaming-notes">
-        <p className="label">Gaming Notes</p>
-        <p>{country.gamingNotes}</p>
+        <p className="label">Market Payment Insight</p>
+        <p>{country.payment_insight}</p>
       </div>
 
       <div>
