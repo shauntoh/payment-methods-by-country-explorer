@@ -24,8 +24,13 @@ function CountryDetails({ country }) {
   return (
     <div className="card country-card">
       <div className="country-header">
-        <div>
-          <h2>{`${country.flag} ${country.country}`}</h2>
+        <div className="country-title-block">
+          <div className="country-title-row">
+            <span className="flag-inline" aria-label={`${country.country} flag`}>
+              {country.flag}
+            </span>
+            <h2>{country.country}</h2>
+          </div>
           <p className="region">{country.region}</p>
         </div>
       </div>
@@ -33,19 +38,21 @@ function CountryDetails({ country }) {
       <div className="details-grid">
         <div className="detail-item">
           <p className="label">Dominant Payment Method</p>
-          <p>{country.dominantPaymentMethod}</p>
+          <p className="detail-value">{country.dominantPaymentMethod}</p>
         </div>
         <div className="detail-item">
           <p className="label">Card Penetration</p>
-          <p>{country.cardPenetration}</p>
+          <p className="detail-value">{country.cardPenetration}</p>
         </div>
         <div className="detail-item">
           <p className="label">Market Size</p>
-          <p>Population: {formatPopulationInMillions(country.population)}</p>
+          <p className="detail-meta">Population</p>
+          <p className="detail-value">{formatPopulationInMillions(country.population)}</p>
         </div>
         <div className="detail-item">
           <p className="label">Economic Strength</p>
-          <p>GDP per capita: {formatCurrency(country.gdp_per_capita)}</p>
+          <p className="detail-meta">GDP per capita</p>
+          <p className="detail-value">{formatCurrency(country.gdp_per_capita)}</p>
         </div>
       </div>
 
