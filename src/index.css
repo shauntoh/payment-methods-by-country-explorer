@@ -345,3 +345,45 @@ body {
     font-size: 1.5rem;
   }
 }
+
+.risk-regulation-card {
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: grid;
+  gap: 10px;
+}
+
+.risk-regulation-card .label {
+  margin: 0 0 2px;
+}
+
+.risk-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.risk-key {
+  font-size: 0.92rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.risk-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.risk-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.08);
+}

@@ -1,6 +1,23 @@
 import PaymentMethodTags from "./PaymentMethodTags";
 import { getFlagEmoji } from "../utils/flags";
 
+const RISK_COLOR_MAP = {
+  Low: "#22c55e",
+  "Medium-Low": "#84cc16",
+  Medium: "#eab308",
+  "Medium-High": "#f97316",
+  High: "#ef4444",
+  "Very High": "#7f1d1d"
+};
+
+const REGULATION_COLOR_MAP = {
+  Light: "#22c55e",
+  Moderate: "#eab308",
+  Strict: "#f97316",
+  "Very Strict": "#ef4444",
+  Restricted: "#7f1d1d"
+};
+
 function formatPopulationInMillions(population) {
   return `${Math.round(population / 1000000)}M`;
 }
@@ -13,6 +30,25 @@ function formatCurrency(value) {
   }).format(value);
 }
 
+function getRiskLevelColor(level, isRegulation = false) {
+  if (isRegulation) {
+    return REGULATION_COLOR_MAP[level] || "#64748b";
+  }
+
+  return RISK_COLOR_MAP[level] || "#64748b";
+}
+
+function RiskIndicator({ value, isRegulation = false }) {
+  const color = getRiskLevelColor(value, isRegulation);
+
+  return (
+    <span className="risk-indicator" style={{ color }}>
+      <span className="risk-dot" style={{ backgroundColor: color }} />
+      {value}
+    </span>
+  );
+}
+
 function CountryDetails({ country }) {
   if (!country) {
     return (
@@ -23,6 +59,7 @@ function CountryDetails({ country }) {
   }
 
   const flag = getFlagEmoji(country.code);
+  const riskProfile = country.risk_profile || {};
 
   return (
     <div className="card country-card">
@@ -64,6 +101,22 @@ function CountryDetails({ country }) {
             Reference information only. Tax rules vary by transaction type and jurisdiction.
             Please consult a qualified tax advisor before making compliance decisions.
           </p>
+        </div>
+      </div>
+
+      <div className="risk-regulation-card">
+        <p className="label">Payment Risk & Regulation</p>
+        <div className="risk-row">
+          <span className="risk-key">Fraud Risk</span>
+          <RiskIndicator value={riskProfile.fraud_risk || "Medium"} />
+        </div>
+        <div className="risk-row">
+          <span className="risk-key">Chargeback Risk</span>
+          <RiskIndicator value={riskProfile.chargeback_risk || "Medium"} />
+        </div>
+        <div className="risk-row">
+          <span className="risk-key">Gaming Content Regulation</span>
+          <RiskIndicator value={riskProfile.gaming_regulation || "Moderate"} isRegulation />
         </div>
       </div>
 
