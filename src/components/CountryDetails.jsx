@@ -57,6 +57,14 @@ function CountryDetails({ country }) {
           <p className="detail-meta">GDP per capita</p>
           <p className="detail-value">{formatCurrency(country.gdp_per_capita)}</p>
         </div>
+        <div className="detail-item">
+          <p className="label">Digital Services Tax / VAT</p>
+          <p className="detail-value">{country.digital_tax}</p>
+          <p className="detail-meta">
+            Reference information only. Tax rules vary by transaction type and jurisdiction.
+            Please consult a qualified tax advisor before making compliance decisions.
+          </p>
+        </div>
       </div>
 
       <div className="payment-mix">
