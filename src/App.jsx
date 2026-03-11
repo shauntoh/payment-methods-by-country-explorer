@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import CountryDetails from "./components/CountryDetails";
 import FilterBar from "./components/FilterBar";
@@ -56,7 +56,7 @@ function App() {
 
         {filteredCountries.length === 0 ? (
           <div className="card empty-results">
-            <h2>No countries found</h2>
+            <h2>No markets found</h2>
             <p>Try a different search term or region filter.</p>
           </div>
         ) : (

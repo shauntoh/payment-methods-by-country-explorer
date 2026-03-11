@@ -15,7 +15,7 @@ function Sidebar({
       <input
         type="text"
         className="search-input"
-        placeholder="Search countries..."
+        placeholder="Search markets..."
         value={searchTerm}
         onChange={(event) => onSearchChange(event.target.value)}
       />

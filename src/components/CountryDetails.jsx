@@ -1,6 +1,5 @@
 import PaymentMethodTags from "./PaymentMethodTags";
 import CountryFlag from "./CountryFlag";
-import { getPaymentMethodColor } from "../utils/paymentMethodColors";
 
 const RISK_COLOR_MAP = {
   Low: "#22c55e",
@@ -54,7 +53,7 @@ function CountryDetails({ country }) {
   if (!country) {
     return (
       <div className="card country-card">
-        <p className="empty-state">No country selected.</p>
+        <p className="empty-state">No market selected.</p>
       </div>
     );
   }
@@ -129,24 +128,17 @@ function CountryDetails({ country }) {
         </div>
 
         <div className="payment-mix-list">
-          {(country.payment_share || []).map((item) => {
-            const methodColor = getPaymentMethodColor(item.method);
-
-            return (
-              <div key={item.method} className="mix-row">
-                <div className="mix-row-top">
-                  <span className="mix-method">{item.method}</span>
-                  <span className="mix-share" style={{ color: methodColor }}>{item.share}%</span>
-                </div>
-                <div className="mix-track" role="presentation">
-                  <div
-                    className="mix-fill"
-                    style={{ width: `${item.share}%`, background: methodColor }}
-                  />
-                </div>
+          {(country.payment_share || []).map((item) => (
+            <div key={item.method} className="mix-row">
+              <div className="mix-row-top">
+                <span className="mix-method">{item.method}</span>
+                <span className="mix-share">{item.share}%</span>
               </div>
-            );
-          })}
+              <div className="mix-track" role="presentation">
+                <div className="mix-fill" style={{ width: `${item.share}%` }} />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
