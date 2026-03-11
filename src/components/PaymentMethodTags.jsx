@@ -3,9 +3,14 @@ import {
   FaExchangeAlt,
   FaReceipt,
   FaWallet,
-  FaMobileAlt
+  FaMobileAlt,
+  FaBitcoin
 } from "react-icons/fa";
 import { SiApplepay, SiGooglepay, SiPaypal } from "react-icons/si";
+import {
+  getPaymentMethodCategory,
+  getPaymentMethodColor
+} from "../utils/paymentMethodColors";
 
 function getPaymentIcon(method = "") {
   const value = method.toLowerCase();
@@ -22,43 +27,26 @@ function getPaymentIcon(method = "") {
     return SiGooglepay;
   }
 
-  const cardMethods = ["visa", "mastercard", "amex", "jcb", "rupay", "verve"];
-  if (cardMethods.some((card) => value.includes(card))) {
+  const category = getPaymentMethodCategory(method);
+
+  if (category === "cards") {
     return FaCreditCard;
   }
 
-  const transferMethods = [
-    "pix",
-    "upi",
-    "paynow",
-    "interac",
-    "sepa",
-    "spei",
-    "faster payments",
-    "eft",
-    "nip transfer",
-    "ozow",
-    "flutterwave",
-    "bank transfer",
-    "transfer"
-  ];
-  if (transferMethods.some((transfer) => value.includes(transfer))) {
+  if (category === "bank_transfer") {
     return FaExchangeAlt;
   }
 
-  const cashVoucherMethods = ["boleto", "oxxo", "konbini", "voucher", "cash"];
-  if (cashVoucherMethods.some((cash) => value.includes(cash))) {
+  if (category === "cash_voucher") {
     return FaReceipt;
   }
 
-  const mobileMoneyMethods = ["mobile", "momo", "mpesa"];
-  if (mobileMoneyMethods.some((mobile) => value.includes(mobile))) {
+  if (category === "carrier_billing") {
     return FaMobileAlt;
   }
 
-  const walletMethods = ["wallet", "grabpay", "paytm", "paypay"];
-  if (walletMethods.some((wallet) => value.includes(wallet))) {
-    return FaWallet;
+  if (category === "crypto") {
+    return FaBitcoin;
   }
 
   return FaWallet;
@@ -69,12 +57,20 @@ function PaymentMethodTags({ methods = [] }) {
     <div className="tag-list">
       {methods.map((method) => {
         const Icon = getPaymentIcon(method);
+        const methodColor = getPaymentMethodColor(method);
 
         return (
           <span
             key={method}
             className="tag"
-            style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              color: methodColor,
+              borderColor: `${methodColor}66`,
+              background: `${methodColor}1A`
+            }}
           >
             <Icon size={12} aria-hidden="true" />
             <span>{method}</span>

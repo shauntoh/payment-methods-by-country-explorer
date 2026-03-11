@@ -86,6 +86,32 @@ body {
   cursor: pointer;
   text-align: left;
 }
+.country-flag {
+  width: 20px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid #cbd5e1;
+  object-fit: cover;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.country-flag-fallback {
+  width: 20px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
 
 .country-button:hover {
   background: #eef2ff;
@@ -159,7 +185,6 @@ body {
 }
 
 .flag-inline {
-  font-size: 1.9rem;
   line-height: 1;
 }
 
@@ -386,4 +411,14 @@ body {
   height: 10px;
   border-radius: 999px;
   box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.08);
+}
+.flag-inline-img {
+  width: 28px;
+  height: 20px;
+}
+
+.flag-inline-fallback {
+  width: 28px;
+  height: 20px;
+  font-size: 0.56rem;
 }

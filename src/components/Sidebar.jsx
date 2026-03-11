@@ -1,4 +1,4 @@
-import { getFlagEmoji } from "../utils/flags";
+import CountryFlag from "./CountryFlag";
 
 function Sidebar({
   countries,
@@ -23,7 +23,6 @@ function Sidebar({
       <ul className="country-list">
         {countries.map((country) => {
           const isSelected = selectedCountry?.id === country.id;
-          const flag = getFlagEmoji(country.code);
 
           return (
             <li key={country.id}>
@@ -32,7 +31,7 @@ function Sidebar({
                 className={`country-button ${isSelected ? "selected" : ""}`}
                 onClick={() => onSelectCountry(country)}
               >
-                <span>{flag}</span>
+                <CountryFlag isoCode={country.iso_code || country.code} countryName={country.country} />
                 <span>{country.country}</span>
               </button>
             </li>

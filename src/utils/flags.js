@@ -1,18 +1,19 @@
-export function getFlagEmoji(countryCode = "") {
-  if (!countryCode || countryCode.length !== 2) {
+export function getCountryIsoCode(countryCode = "") {
+  const code = String(countryCode || "").trim().toUpperCase();
+
+  if (!/^[A-Z]{2}$/.test(code)) {
     return "";
   }
 
-  const code = countryCode.toUpperCase();
-  const isValid = /^[A-Z]{2}$/.test(code);
+  return code;
+}
 
-  if (!isValid) {
+export function getCountryFlagImageUrl(countryCode = "") {
+  const isoCode = getCountryIsoCode(countryCode);
+
+  if (!isoCode) {
     return "";
   }
 
-  const OFFSET = 127397;
-  return String.fromCodePoint(
-    code.charCodeAt(0) + OFFSET,
-    code.charCodeAt(1) + OFFSET
-  );
+  return `https://flagcdn.com/24x18/${isoCode.toLowerCase()}.png`;
 }
