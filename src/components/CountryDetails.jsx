@@ -50,6 +50,17 @@ function RiskIndicator({ value, isRegulation = false }) {
   );
 }
 
+function InfoTooltip({ text }) {
+  return (
+    <span className="info-tooltip">
+      <span className="info-icon" tabIndex={0} aria-label="More information">
+        i
+      </span>
+      <span className="info-tooltip-content" role="tooltip">{text}</span>
+    </span>
+  );
+}
+
 function CountryDetails({ country }) {
   if (!country) {
     return (
@@ -86,7 +97,10 @@ function CountryDetails({ country }) {
           <p className="detail-value">{country.dominantPaymentMethod}</p>
         </div>
         <div className="detail-item">
-          <p className="label">Card Penetration</p>
+          <p className="label metric-label">
+            Card Penetration
+            <InfoTooltip text="Estimated level of credit and debit card usage for online and digital payments." />
+          </p>
           <p className="detail-value">{country.cardPenetration}</p>
         </div>
         <div className="detail-item">
@@ -95,7 +109,10 @@ function CountryDetails({ country }) {
           <p className="detail-value">{formatPopulationInMillions(country.population)}</p>
         </div>
         <div className="detail-item">
-          <p className="label">Gaming Age Demographic</p>
+          <p className="label metric-label">
+            Gaming Age Demographic
+            <InfoTooltip text="Share of the population aged 15-34, a key demographic segment for video gaming markets." />
+          </p>
           <p className="detail-meta">Population Age 15-34</p>
           <p className="detail-value">{gamingAgeDisplay}</p>
         </div>
@@ -105,7 +122,10 @@ function CountryDetails({ country }) {
           <p className="detail-value">{formatCurrency(country.gdp_per_capita)}</p>
         </div>
         <div className="detail-item detail-item-wide">
-          <p className="label">Digital Services Tax / VAT</p>
+          <p className="label metric-label">
+            Digital Services Tax / VAT
+            <InfoTooltip text="Taxes applied to digital services such as online gaming purchases or in-app transactions." />
+          </p>
           <p className="detail-value">{country.digital_tax}</p>
           <p className="detail-meta">
             Reference information only. Tax rules vary by transaction type and jurisdiction.
@@ -117,15 +137,24 @@ function CountryDetails({ country }) {
       <div className="risk-regulation-card section-panel">
         <p className="label">Payment Risk & Regulation</p>
         <div className="risk-row">
-          <span className="risk-key">Fraud Risk</span>
+          <span className="risk-key metric-label-inline">
+            Fraud Risk
+            <InfoTooltip text="Relative likelihood of fraudulent transactions such as stolen payment credentials, account takeover, or unauthorized purchases." />
+          </span>
           <RiskIndicator value={riskProfile.fraud_risk || "Medium"} />
         </div>
         <div className="risk-row">
-          <span className="risk-key">Chargeback Risk</span>
+          <span className="risk-key metric-label-inline">
+            Card Chargeback Risk
+            <InfoTooltip text="Estimated risk of card payment disputes initiated through card networks, resulting in transaction reversals." />
+          </span>
           <RiskIndicator value={riskProfile.chargeback_risk || "Medium"} />
         </div>
         <div className="risk-row">
-          <span className="risk-key">Gaming Content Regulation</span>
+          <span className="risk-key metric-label-inline">
+            Gaming Content Regulation
+            <InfoTooltip text="Regulatory restrictions affecting video game publishing or monetization." />
+          </span>
           <RiskIndicator value={riskProfile.gaming_regulation || "Moderate"} isRegulation />
         </div>
       </div>
