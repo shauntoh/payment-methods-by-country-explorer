@@ -663,12 +663,21 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  overflow: visible;
+}
+
+.country-card,
+.detail-item,
+.section-panel,
+.risk-row {
+  overflow: visible;
 }
 
 .info-tooltip {
   position: relative;
   display: inline-flex;
   align-items: center;
+  z-index: 50;
 }
 
 .info-icon {
@@ -693,10 +702,11 @@ body {
 }
 
 .info-tooltip-content {
+  display: none;
   position: absolute;
   left: 50%;
   bottom: calc(100% + 8px);
-  transform: translateX(-50%) translateY(4px);
+  transform: translateX(-50%);
   width: min(260px, 72vw);
   padding: 8px 10px;
   border-radius: 8px;
@@ -709,14 +719,11 @@ body {
   text-transform: none;
   letter-spacing: normal;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.14s ease, transform 0.14s ease;
-  z-index: 20;
+  z-index: 999;
 }
 
 .info-tooltip:hover .info-tooltip-content,
 .info-tooltip:focus-within .info-tooltip-content {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  display: block;
 }
