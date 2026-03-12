@@ -62,7 +62,7 @@ function CountryDetails({ country }) {
 
   return (
     <div className="card country-card">
-      <div className="country-header">
+      <div className="country-header country-header-panel">
         <div className="country-title-block">
           <div className="country-title-row">
             <CountryFlag
@@ -95,7 +95,7 @@ function CountryDetails({ country }) {
           <p className="detail-meta">GDP per capita</p>
           <p className="detail-value">{formatCurrency(country.gdp_per_capita)}</p>
         </div>
-        <div className="detail-item">
+        <div className="detail-item detail-item-wide">
           <p className="label">Digital Services Tax / VAT</p>
           <p className="detail-value">{country.digital_tax}</p>
           <p className="detail-meta">
@@ -105,7 +105,7 @@ function CountryDetails({ country }) {
         </div>
       </div>
 
-      <div className="risk-regulation-card">
+      <div className="risk-regulation-card section-panel">
         <p className="label">Payment Risk & Regulation</p>
         <div className="risk-row">
           <span className="risk-key">Fraud Risk</span>
@@ -121,7 +121,7 @@ function CountryDetails({ country }) {
         </div>
       </div>
 
-      <div className="payment-mix">
+      <div className="payment-mix section-panel">
         <div className="payment-mix-header">
           <p className="label">Payment Method Mix</p>
           <span className="mix-estimated">Estimated</span>
@@ -142,12 +142,12 @@ function CountryDetails({ country }) {
         </div>
       </div>
 
-      <div className="gaming-notes">
+      <div className="gaming-notes section-panel">
         <p className="label">Market Payment Insight</p>
         <p>{country.payment_insight}</p>
       </div>
 
-      <div>
+      <div className="method-tags-panel section-panel">
         <p className="label">Dominant Payment Methods</p>
         <PaymentMethodTags methods={country.dominantMethods} />
       </div>

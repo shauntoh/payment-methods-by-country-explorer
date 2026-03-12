@@ -422,3 +422,214 @@ body {
   height: 20px;
   font-size: 0.56rem;
 }
+/* Country Details Panel Polish */
+.country-card {
+  padding: 24px;
+  background: #fbfdff;
+  border-color: #dbe4f0;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+}
+
+.country-header-panel {
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.country-title-row {
+  gap: 12px;
+}
+
+.flag-inline-img {
+  width: 30px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}
+
+.country-header h2 {
+  font-size: 1.72rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.region {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 2px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #dbe4f0;
+  background: #f8fbff;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.details-grid {
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  border-radius: 12px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+
+.detail-item-wide {
+  grid-column: 1 / -1;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.detail-value {
+  margin-top: 2px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.detail-meta {
+  margin-top: 4px;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.section-panel {
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+
+.risk-regulation-card {
+  gap: 6px;
+}
+
+.risk-row {
+  min-height: 34px;
+  padding: 4px 0;
+}
+
+.risk-row:not(:last-child) {
+  border-bottom: 1px solid #edf2f7;
+}
+
+.risk-key {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.risk-indicator {
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+.payment-mix {
+  background: #ffffff;
+}
+
+.payment-mix-header {
+  margin-bottom: 12px;
+}
+
+.payment-mix-list {
+  gap: 12px;
+}
+
+.mix-row {
+  gap: 7px;
+}
+
+.mix-row-top {
+  align-items: baseline;
+}
+
+.mix-method {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mix-share {
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.mix-track {
+  height: 8px;
+  background: #e6edf5;
+}
+
+.mix-fill {
+  background: #2563eb;
+}
+
+.gaming-notes p {
+  color: #334155;
+  line-height: 1.5;
+}
+
+.method-tags-panel .label {
+  margin-bottom: 10px;
+}
+
+.tag-list {
+  margin-top: 0;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border-color: var(--tag-border, #dbe4f0);
+  background: var(--tag-bg, #f8fbff);
+  color: var(--tag-color, #1e3a8a);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.tag-icon {
+  color: var(--tag-color, #1e3a8a);
+}
+
+.tag-text {
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .country-card {
+    padding: 18px;
+  }
+
+  .country-header-panel {
+    padding: 14px;
+  }
+
+  .country-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .flag-inline-img {
+    width: 28px;
+    height: 20px;
+  }
+}

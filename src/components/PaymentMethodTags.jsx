@@ -64,16 +64,13 @@ function PaymentMethodTags({ methods = [] }) {
             key={method}
             className="tag"
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              color: methodColor,
-              borderColor: `${methodColor}66`,
-              background: `${methodColor}1A`
+              "--tag-color": methodColor,
+              "--tag-border": `${methodColor}55`,
+              "--tag-bg": `${methodColor}14`
             }}
           >
-            <Icon size={12} aria-hidden="true" />
-            <span>{method}</span>
+            <Icon className="tag-icon" size={12} aria-hidden="true" />
+            <span className="tag-text">{method}</span>
           </span>
         );
       })}
