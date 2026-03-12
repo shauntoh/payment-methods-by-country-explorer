@@ -633,3 +633,28 @@ body {
     height: 20px;
   }
 }
+.sort-label {
+  display: block;
+  margin: 2px 0 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.sort-select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 0.92rem;
+  color: #1f2937;
+  background: #ffffff;
+  margin-bottom: 12px;
+}
+
+.sort-select:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #60a5fa;
+}
