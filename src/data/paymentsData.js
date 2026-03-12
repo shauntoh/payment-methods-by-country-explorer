@@ -18,6 +18,7 @@ const paymentsData = [
     payment_insight: "Australia has a mature card-dominated payments ecosystem with very high credit and debit card penetration. Real-time bank transfers through PayID and the New Payments Platform are gaining adoption for peer-to-peer payments. Mobile wallets like Apple Pay and Google Pay are widely used for gaming and digital purchases.",
     paymentInsight: "Australia has a mature card-dominated payments ecosystem with very high credit and debit card penetration. Real-time bank transfers through PayID and the New Payments Platform are gaining adoption for peer-to-peer payments. Mobile wallets like Apple Pay and Google Pay are widely used for gaming and digital purchases.",
     population: 26700000,
+    gaming_age_percent: 0.26,
     gdp_per_capita: 64700,
     digital_tax: "GST 10%",
     risk_profile: {
@@ -45,6 +46,7 @@ const paymentsData = [
     payment_insight: "Mobile wallets dominate Bangladesh's digital payment ecosystem, with bKash serving as the leading platform. These wallets enable users without bank accounts or cards to participate in digital commerce. Card usage remains relatively low but is slowly growing in urban markets.",
     paymentInsight: "Mobile wallets dominate Bangladesh's digital payment ecosystem, with bKash serving as the leading platform. These wallets enable users without bank accounts or cards to participate in digital commerce. Card usage remains relatively low but is slowly growing in urban markets.",
     population: 173000000,
+    gaming_age_percent: 0.34,
     gdp_per_capita: 2870,
     digital_tax: "VAT 15%",
     risk_profile: {
@@ -72,6 +74,7 @@ const paymentsData = [
     payment_insight: "Pix has rapidly become the dominant instant payment system in Brazil and is widely used for online deposits and withdrawals. Cards remain important for subscription payments and larger purchases due to installment options. Traditional methods like Boleto continue to serve users without access to credit cards.",
     paymentInsight: "Pix has rapidly become the dominant instant payment system in Brazil and is widely used for online deposits and withdrawals. Cards remain important for subscription payments and larger purchases due to installment options. Traditional methods like Boleto continue to serve users without access to credit cards.",
     population: 203000000,
+    gaming_age_percent: 0.30,
     gdp_per_capita: 10500,
     digital_tax: "ISS / digital tax approx 5-10%",
     risk_profile: {
@@ -99,6 +102,7 @@ const paymentsData = [
     payment_insight: "Canada has a strong card-based payment ecosystem supported by high credit card penetration. Interac bank transfers are widely used for domestic payments and peer-to-peer transactions. Digital wallets such as PayPal and Apple Pay are common for gaming and online commerce.",
     paymentInsight: "Canada has a strong card-based payment ecosystem supported by high credit card penetration. Interac bank transfers are widely used for domestic payments and peer-to-peer transactions. Digital wallets such as PayPal and Apple Pay are common for gaming and online commerce.",
     population: 40200000,
+    gaming_age_percent: 0.24,
     gdp_per_capita: 53400,
     digital_tax: "GST/HST 5-15%",
     risk_profile: {
@@ -126,6 +130,7 @@ const paymentsData = [
     payment_insight: "Cards dominate Chile's online payment ecosystem with strong adoption for e-commerce transactions. Local payment processors like WebPay enable card acceptance across many domestic merchants. Digital wallets are growing but cards remain the primary payment method.",
     paymentInsight: "Cards dominate Chile's online payment ecosystem with strong adoption for e-commerce transactions. Local payment processors like WebPay enable card acceptance across many domestic merchants. Digital wallets are growing but cards remain the primary payment method.",
     population: 19600000,
+    gaming_age_percent: 0.25,
     gdp_per_capita: 17100,
     digital_tax: "VAT 19%",
     risk_profile: {
@@ -153,6 +158,7 @@ const paymentsData = [
     payment_insight: "China operates one of the most advanced wallet-based payment ecosystems in the world. Alipay and WeChat Pay dominate online and mobile payments across nearly all consumer transactions. Card payments exist but are rarely used directly for gaming or digital purchases.",
     paymentInsight: "China operates one of the most advanced wallet-based payment ecosystems in the world. Alipay and WeChat Pay dominate online and mobile payments across nearly all consumer transactions. Card payments exist but are rarely used directly for gaming or digital purchases.",
     population: 1410000000,
+    gaming_age_percent: 0.26,
     gdp_per_capita: 12600,
     digital_tax: "VAT approx 6%",
     risk_profile: {
@@ -180,6 +186,7 @@ const paymentsData = [
     payment_insight: "Cash voucher networks remain an important part of Colombia's digital payment ecosystem. Services such as Efecty and Baloto allow users to pay for online purchases using cash at physical locations. Card adoption is increasing but remains lower than in developed markets.",
     paymentInsight: "Cash voucher networks remain an important part of Colombia's digital payment ecosystem. Services such as Efecty and Baloto allow users to pay for online purchases using cash at physical locations. Card adoption is increasing but remains lower than in developed markets.",
     population: 52400000,
+    gaming_age_percent: 0.33,
     gdp_per_capita: 7300,
     digital_tax: "VAT 19%",
     risk_profile: {
@@ -207,6 +214,7 @@ const paymentsData = [
     payment_insight: "Egypt's digital payment ecosystem combines mobile wallets with cash-based payment networks. Fawry allows consumers to pay for online purchases through kiosks and convenience stores. Card adoption is growing but cash-linked payment systems remain important.",
     paymentInsight: "Egypt's digital payment ecosystem combines mobile wallets with cash-based payment networks. Fawry allows consumers to pay for online purchases through kiosks and convenience stores. Card adoption is growing but cash-linked payment systems remain important.",
     population: 114000000,
+    gaming_age_percent: 0.35,
     gdp_per_capita: 3600,
     digital_tax: "VAT 14%",
     risk_profile: {
@@ -234,6 +242,7 @@ const paymentsData = [
     payment_insight: "Hong Kong maintains a strong card-based payment ecosystem with widespread acceptance for online purchases. The Faster Payment System (FPS) enables real-time bank transfers between accounts. Digital wallets like AlipayHK and WeChat Pay are widely used in retail and mobile payments.",
     paymentInsight: "Hong Kong maintains a strong card-based payment ecosystem with widespread acceptance for online purchases. The Faster Payment System (FPS) enables real-time bank transfers between accounts. Digital wallets like AlipayHK and WeChat Pay are widely used in retail and mobile payments.",
     population: 7500000,
+    gaming_age_percent: 0.23,
     gdp_per_capita: 50500,
     digital_tax: "No VAT or digital tax",
     risk_profile: {
@@ -261,6 +270,7 @@ const paymentsData = [
     payment_insight: "India's payments ecosystem is dominated by UPI, one of the largest real-time payment networks in the world. Instant bank transfers are commonly used for small-value digital purchases and gaming transactions. Cards remain relevant for subscriptions and international payments.",
     paymentInsight: "India's payments ecosystem is dominated by UPI, one of the largest real-time payment networks in the world. Instant bank transfers are commonly used for small-value digital purchases and gaming transactions. Cards remain relevant for subscriptions and international payments.",
     population: 1430000000,
+    gaming_age_percent: 0.34,
     gdp_per_capita: 2698,
     digital_tax: "GST 18%",
     risk_profile: {
@@ -288,6 +298,7 @@ const paymentsData = [
     payment_insight: "Indonesia has one of Southeast Asia's most wallet-driven digital economies. E-wallets such as GoPay, OVO, and Dana are widely used for mobile transactions and gaming deposits. Card usage remains relatively low compared to developed markets.",
     paymentInsight: "Indonesia has one of Southeast Asia's most wallet-driven digital economies. E-wallets such as GoPay, OVO, and Dana are widely used for mobile transactions and gaming deposits. Card usage remains relatively low compared to developed markets.",
     population: 281000000,
+    gaming_age_percent: 0.33,
     gdp_per_capita: 4900,
     digital_tax: "VAT 11%",
     risk_profile: {
@@ -315,6 +326,7 @@ const paymentsData = [
     payment_insight: "Japan maintains a strong credit card ecosystem supported by high consumer trust in card payments. Convenience store payments known as Konbini allow users to pay online purchases in cash at physical stores. Mobile wallets such as PayPay are growing rapidly in popularity.",
     paymentInsight: "Japan maintains a strong credit card ecosystem supported by high consumer trust in card payments. Convenience store payments known as Konbini allow users to pay online purchases in cash at physical stores. Mobile wallets such as PayPay are growing rapidly in popularity.",
     population: 124000000,
+    gaming_age_percent: 0.20,
     gdp_per_capita: 32487,
     digital_tax: "Consumption tax 10%",
     risk_profile: {
@@ -342,6 +354,7 @@ const paymentsData = [
     payment_insight: "Kenya is one of the most advanced mobile money economies in the world. M-Pesa dominates everyday payments and is widely used for online and gaming transactions. Card adoption remains limited compared to mobile money systems.",
     paymentInsight: "Kenya is one of the most advanced mobile money economies in the world. M-Pesa dominates everyday payments and is widely used for online and gaming transactions. Card adoption remains limited compared to mobile money systems.",
     population: 55400000,
+    gaming_age_percent: 0.35,
     gdp_per_capita: 2100,
     digital_tax: "VAT 16%",
     risk_profile: {
@@ -369,6 +382,7 @@ const paymentsData = [
     payment_insight: "South Korea has extremely high card penetration with widespread acceptance for digital purchases. Domestic wallets such as KakaoPay and NaverPay are integrated across many online services. Mobile payments and super-apps are increasingly used for gaming and digital goods.",
     paymentInsight: "South Korea has extremely high card penetration with widespread acceptance for digital purchases. Domestic wallets such as KakaoPay and NaverPay are integrated across many online services. Mobile payments and super-apps are increasingly used for gaming and digital goods.",
     population: 51700000,
+    gaming_age_percent: 0.23,
     gdp_per_capita: 35300,
     digital_tax: "VAT 10%",
     risk_profile: {
@@ -396,6 +410,7 @@ const paymentsData = [
     payment_insight: "Malaysia has a diverse payment ecosystem combining cards, bank transfers, and digital wallets. Real-time bank transfers through FPX are widely used for online purchases. Wallets such as Touch 'n Go and GrabPay are popular among mobile-first consumers.",
     paymentInsight: "Malaysia has a diverse payment ecosystem combining cards, bank transfers, and digital wallets. Real-time bank transfers through FPX are widely used for online purchases. Wallets such as Touch 'n Go and GrabPay are popular among mobile-first consumers.",
     population: 35200000,
+    gaming_age_percent: 0.31,
     gdp_per_capita: 12900,
     digital_tax: "Service tax 6-8%",
     risk_profile: {
@@ -423,6 +438,7 @@ const paymentsData = [
     payment_insight: "Cards dominate Mexico's online payment ecosystem, especially for international digital purchases. Cash vouchers such as OXXO allow consumers to pay for online purchases at convenience stores. Bank transfer systems like SPEI are growing in adoption.",
     paymentInsight: "Cards dominate Mexico's online payment ecosystem, especially for international digital purchases. Cash vouchers such as OXXO allow consumers to pay for online purchases at convenience stores. Bank transfer systems like SPEI are growing in adoption.",
     population: 129000000,
+    gaming_age_percent: 0.32,
     gdp_per_capita: 13300,
     digital_tax: "VAT 16%",
     risk_profile: {
@@ -450,6 +466,7 @@ const paymentsData = [
     payment_insight: "New Zealand has a highly developed card-based payment ecosystem similar to Australia. Cards dominate online payments and are widely used for subscriptions and digital goods. Mobile wallets such as Apple Pay are increasingly common for mobile transactions.",
     paymentInsight: "New Zealand has a highly developed card-based payment ecosystem similar to Australia. Cards dominate online payments and are widely used for subscriptions and digital goods. Mobile wallets such as Apple Pay are increasingly common for mobile transactions.",
     population: 5200000,
+    gaming_age_percent: 0.25,
     gdp_per_capita: 48300,
     digital_tax: "GST 15%",
     risk_profile: {
@@ -477,6 +494,7 @@ const paymentsData = [
     payment_insight: "Pakistan's digital payments ecosystem is driven primarily by mobile wallets. Services such as Easypaisa and JazzCash allow consumers to make online payments without bank cards. Card adoption remains relatively low but is gradually increasing.",
     paymentInsight: "Pakistan's digital payments ecosystem is driven primarily by mobile wallets. Services such as Easypaisa and JazzCash allow consumers to make online payments without bank cards. Card adoption remains relatively low but is gradually increasing.",
     population: 241000000,
+    gaming_age_percent: 0.36,
     gdp_per_capita: 1550,
     digital_tax: "Sales tax on digital services ~16%",
     risk_profile: {
@@ -504,6 +522,7 @@ const paymentsData = [
     payment_insight: "The Philippines has a fast-growing digital wallet ecosystem led by GCash and Maya. These wallets are widely used for gaming deposits and mobile transactions. Card usage is increasing but wallet payments remain dominant.",
     paymentInsight: "The Philippines has a fast-growing digital wallet ecosystem led by GCash and Maya. These wallets are widely used for gaming deposits and mobile transactions. Card usage is increasing but wallet payments remain dominant.",
     population: 117000000,
+    gaming_age_percent: 0.35,
     gdp_per_capita: 3900,
     digital_tax: "VAT 12%",
     risk_profile: {
@@ -531,6 +550,7 @@ const paymentsData = [
     payment_insight: "Singapore has a highly developed card ecosystem supported by strong banking infrastructure. PayNow enables real-time bank transfers and is widely used for peer-to-peer and merchant payments. Digital wallets such as GrabPay and Apple Pay are commonly used for mobile transactions.",
     paymentInsight: "Singapore has a highly developed card ecosystem supported by strong banking infrastructure. PayNow enables real-time bank transfers and is widely used for peer-to-peer and merchant payments. Digital wallets such as GrabPay and Apple Pay are commonly used for mobile transactions.",
     population: 5920000,
+    gaming_age_percent: 0.24,
     gdp_per_capita: 84700,
     digital_tax: "GST 9%",
     risk_profile: {
@@ -558,6 +578,7 @@ const paymentsData = [
     payment_insight: "South Africa has one of the most advanced payment ecosystems in Africa. Cards dominate online transactions and are widely used for digital purchases. Instant EFT bank transfers are also commonly used for online deposits.",
     paymentInsight: "South Africa has one of the most advanced payment ecosystems in Africa. Cards dominate online transactions and are widely used for digital purchases. Instant EFT bank transfers are also commonly used for online deposits.",
     population: 62000000,
+    gaming_age_percent: 0.33,
     gdp_per_capita: 6400,
     digital_tax: "VAT 15%",
     risk_profile: {
@@ -585,6 +606,7 @@ const paymentsData = [
     payment_insight: "Taiwan maintains a strong card ecosystem with widespread acceptance for online purchases. Digital wallets such as Line Pay and JKoPay are increasingly used for mobile transactions. Bank transfers remain an important payment option for some online merchants.",
     paymentInsight: "Taiwan maintains a strong card ecosystem with widespread acceptance for online purchases. Digital wallets such as Line Pay and JKoPay are increasingly used for mobile transactions. Bank transfers remain an important payment option for some online merchants.",
     population: 23500000,
+    gaming_age_percent: 0.22,
     gdp_per_capita: 33900,
     digital_tax: "VAT 5%",
     risk_profile: {
@@ -612,6 +634,7 @@ const paymentsData = [
     payment_insight: "Thailand's payments ecosystem is increasingly driven by real-time bank transfers through PromptPay. This system is widely integrated into mobile banking apps and QR code payments. Cards remain important for international and subscription transactions.",
     paymentInsight: "Thailand's payments ecosystem is increasingly driven by real-time bank transfers through PromptPay. This system is widely integrated into mobile banking apps and QR code payments. Cards remain important for international and subscription transactions.",
     population: 71800000,
+    gaming_age_percent: 0.27,
     gdp_per_capita: 7300,
     digital_tax: "VAT 7%",
     risk_profile: {
@@ -639,6 +662,7 @@ const paymentsData = [
     payment_insight: "Turkey has a strong card-based payment ecosystem with widespread credit card usage. Domestic fintech wallets such as Papara are popular for gaming deposits and digital purchases. Bank transfers remain an important alternative payment method.",
     paymentInsight: "Turkey has a strong card-based payment ecosystem with widespread credit card usage. Domestic fintech wallets such as Papara are popular for gaming deposits and digital purchases. Bank transfers remain an important alternative payment method.",
     population: 85700000,
+    gaming_age_percent: 0.31,
     gdp_per_capita: 13100,
     digital_tax: "VAT 20%",
     risk_profile: {
@@ -666,6 +690,7 @@ const paymentsData = [
     payment_insight: "The United States maintains one of the largest card-based payment ecosystems globally. Credit cards dominate online purchases and subscription payments. Digital wallets such as PayPal and Apple Pay are widely used for mobile gaming transactions.",
     paymentInsight: "The United States maintains one of the largest card-based payment ecosystems globally. Credit cards dominate online purchases and subscription payments. Digital wallets such as PayPal and Apple Pay are widely used for mobile gaming transactions.",
     population: 334000000,
+    gaming_age_percent: 0.26,
     gdp_per_capita: 82769,
     digital_tax: "State sales tax varies (0-10%)",
     risk_profile: {
@@ -693,6 +718,7 @@ const paymentsData = [
     payment_insight: "Vietnam has a rapidly expanding digital wallet ecosystem led by MoMo and ZaloPay. Mobile payments are widely used for gaming deposits and small-value purchases. Card adoption is increasing but wallets remain the dominant digital payment method.",
     paymentInsight: "Vietnam has a rapidly expanding digital wallet ecosystem led by MoMo and ZaloPay. Mobile payments are widely used for gaming deposits and small-value purchases. Card adoption is increasing but wallets remain the dominant digital payment method.",
     population: 100000000,
+    gaming_age_percent: 0.32,
     gdp_per_capita: 4300,
     digital_tax: "VAT 10%",
     risk_profile: {

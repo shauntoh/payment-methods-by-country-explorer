@@ -1,5 +1,6 @@
 import PaymentMethodTags from "./PaymentMethodTags";
 import CountryFlag from "./CountryFlag";
+import { formatLargeNumber } from "../utils/formatters";
 
 const RISK_COLOR_MAP = {
   Low: "#22c55e",
@@ -59,6 +60,9 @@ function CountryDetails({ country }) {
   }
 
   const riskProfile = country.risk_profile || {};
+  const gamingAgePercent = country.gaming_age_percent || 0;
+  const gamingAgePopulation = Math.round((country.population || 0) * gamingAgePercent);
+  const gamingAgeDisplay = `${Math.round(gamingAgePercent * 100)}% (~${formatLargeNumber(gamingAgePopulation)} people)`;
 
   return (
     <div className="card country-card">
@@ -89,6 +93,11 @@ function CountryDetails({ country }) {
           <p className="label">Market Size</p>
           <p className="detail-meta">Population</p>
           <p className="detail-value">{formatPopulationInMillions(country.population)}</p>
+        </div>
+        <div className="detail-item">
+          <p className="label">Gaming Age Demographic</p>
+          <p className="detail-meta">Population Age 15-34</p>
+          <p className="detail-value">{gamingAgeDisplay}</p>
         </div>
         <div className="detail-item">
           <p className="label">Economic Strength</p>
